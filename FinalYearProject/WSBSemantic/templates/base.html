@@ -1,0 +1,27 @@
+
+  {% load static %}
+  
+ <head>
+
+  <link rel="stylesheet" href="{% static 'style.css'%}">
+
+ </head>
+
+ <body>
+    <nav class="page__menu page__custom-settings menu">
+      <ul class="menu__list r-list">
+        <li class="menu__group"><a href="{% url 'homepage' %}" class="menu__link r-link text-underlined">Home</a></li>
+        <li class="menu__group"><a href="{% url 'rsa' %}" class="menu__link r-link text-underlined">Reddit Analysis</a></li>
+        <li class="menu__group"><a href="{% url 'tsa' %}" class="menu__link r-link text-underlined">Twitter Analysis</a></li>
+        <li class="menu__group"><a href="{% url 'fc' %}" class="menu__link r-link text-underlined">Future Changes</a></li>
+      </ul>
+    </nav>
+  </div>
+ </body>
+
+
+<h1>HERRO</h1>
+
+{% block content %}
+
+{% endblock %}
