@@ -2,4 +2,11 @@
 
 {% block content %}
 <h2> extending at redditSA</h2>
+
+
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" name="run_script">Run script</button>
+</form>
 {% endblock %}
