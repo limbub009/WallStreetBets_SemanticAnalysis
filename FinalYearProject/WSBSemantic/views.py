@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from WSBSemantic.utils import SARedditOut
+from WSBSemantic.utilfunc.utils import SemAnalysis
 
 # Create your views here.
 # request -> response
@@ -18,7 +18,13 @@ def homepage(request):
 
 def redditSA(request):
     if request.method == 'POST' and 'run_script' in request.POST:
-        print (SARedditOut())
+        out_text, graph1, graph2 = SemAnalysis()
+        return render(request, 'redditSA.html',  
+        {
+            'out': out_text, 
+            'g1': graph1, 
+            'g2': graph2
+        })
     return render(request, 'redditSA.html')
 
 

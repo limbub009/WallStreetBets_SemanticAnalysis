@@ -4,9 +4,23 @@
 <h2> extending at redditSA</h2>
 
 
-
 <form method="post">
     {% csrf_token %}
-    <button type="submit" name="run_script">Run script</button>
+    <button id="btnID", onclick ="show()", type="submit" name="run_script">Run script</button>
 </form>
+
+<p>{{ out }}</p>
+<img id = "image" src="data:image/png;base64, {{ g1 }}" alt ="" height = "600", width="1000" onerror='this.style.display = "none"'> 
+<img id = "image2" src="data:image/png;base64, {{ g2 }}" alt ="" height = "600", width="1000" onerror='this.style.display = "none"'> 
+
+
+
+<script>
+    function show(){
+        document.getElementById('btnID')
+            .style.display = "none";
+    }
+</script>
+
+
 {% endblock %}
