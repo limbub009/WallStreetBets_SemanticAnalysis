@@ -1,5 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2> extending at twitterSA</h2>
+<h2> Twitter Analysis </h2>
+
+<div id = "logos">
+<img id = "ttwlogo" src ='https://logos-world.net/wp-content/uploads/2020/04/Twitter-Logo.png'>
+</div>
+
+
+<form method="post" required>
+    {% csrf_token %}
+    <input type="text" name="textfield" >
+    <button id="btnID", onclick ="show()", name = run_script2 type="submit">Run script</button>
+</form>
+
+<p id ="loading">LOADING RESULTS PLEASE WAIT, THIS MAY TAKE 2/3 MINUTES</p>
+
+{% for key, value in out.items %} 
+<div id = o>
+    <div id ="tweet">
+        <p> {{key}}<p>
+    </div>
+    <div id = "sentiment">
+      <p> {{value}} <p>
+    </div>
+</div>
+{% endfor %}
+
+
+<script>
+    function show(){
+        document.getElementById('btnID')
+            .style.display = "none";
+        document.getElementById('loading')
+            .style.visibility = "visible";
+    }
+</script>
+
+
+
+
 {% endblock %}

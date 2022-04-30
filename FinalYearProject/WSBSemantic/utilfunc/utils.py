@@ -103,7 +103,8 @@ def SemAnalysis():
         # Extracting comments, stock tickers from subreddit
         for submission in hot_python:
             flair = submission.link_flair_text 
-            author = submission.author.name         
+            try: author = submission.author.name 
+            except:pass    
             
             
             
@@ -204,7 +205,7 @@ def SemAnalysis():
 
     # Date Visualization
     # most mentioned picks    
-    squarify.plot(sizes=times, label=top, alpha=.7 )
+    squarify.plot(sizes=times, label=top, alpha=.7)
     plt.axis('off')
     plt.title(f"{picks} most mentioned picks")
     buf = io.BytesIO()

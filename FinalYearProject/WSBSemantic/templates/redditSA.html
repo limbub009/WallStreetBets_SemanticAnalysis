@@ -1,17 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2> extending at redditSA</h2>
+<h2> WallStreetBets Analysis</h2>
 
+<div id = "logos">
+<img id = "wwlogo" src ='https://i.kym-cdn.com/entries/icons/original/000/033/559/cover1.jpg'>
+</div>
 
 <form method="post">
     {% csrf_token %}
-    <button id="btnID", onclick ="show()", type="submit" name="run_script">Run script</button>
+    <button id="btnID", onclick ="show()", type="submit" name="run_script">RUN ANALYSIS</button>
 </form>
 
-<p>{{ out }}</p>
+
+<p id ="loading">LOADING RESULTS PLEASE WAIT, THIS MAY TAKE 2/3 MINUTES</p>
+
+<p id = output> {{ out }}</p>
+
+<div id = "graphs">
 <img id = "image" src="data:image/png;base64, {{ g1 }}" alt ="" height = "600", width="1000" onerror='this.style.display = "none"'> 
 <img id = "image2" src="data:image/png;base64, {{ g2 }}" alt ="" height = "600", width="1000" onerror='this.style.display = "none"'> 
+</div>
 
 
 
@@ -19,6 +28,8 @@
     function show(){
         document.getElementById('btnID')
             .style.display = "none";
+        document.getElementById('loading')
+            .style.visibility = "visible";
     }
 </script>
 

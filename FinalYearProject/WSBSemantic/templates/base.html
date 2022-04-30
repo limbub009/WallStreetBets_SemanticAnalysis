@@ -3,25 +3,23 @@
   
  <head>
 
-  <link rel="stylesheet" href="{% static 'style.css'%}">
+  <link href="{% static 'style.css'%}" rel="stylesheet">
 
  </head>
 
- <body>
     <nav class="page__menu page__custom-settings menu">
       <ul class="menu__list r-list">
         <li class="menu__group"><a href="{% url 'homepage' %}" class="menu__link r-link text-underlined">Home</a></li>
         <li class="menu__group"><a href="{% url 'rsa' %}" class="menu__link r-link text-underlined">Reddit Analysis</a></li>
         <li class="menu__group"><a href="{% url 'tsa' %}" class="menu__link r-link text-underlined">Twitter Analysis</a></li>
-        <li class="menu__group"><a href="{% url 'fc' %}" class="menu__link r-link text-underlined">Future Changes</a></li>
+        <!-- <li class="menu__group"><a href="{% url 'fc' %}" class="menu__link r-link text-underlined">Future Changes</a></li> -->
       </ul>
     </nav>
   </div>
- </body>
-
-
-<h1>HERRO</h1>
-
+ 
+  <footer>
+    <p>Queen Mary University of London</p>
+  </footer>
 {% block content %}
 
 {% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from WSBSemantic.utilfunc.utils import SemAnalysis
+from WSBSemantic.utilfunc.twitterbot import main
 
 # Create your views here.
 # request -> response
@@ -29,7 +30,18 @@ def redditSA(request):
 
 
 def twitterSA(request):
+    try:
+        if request.method == 'POST' and 'run_script2' in request.POST:
+            usergivenip = request.POST.get('textfield', None)
+            outputdict = main(usergivenip)
+            return render(request, 'twitterSA.html',  
+            {
+                'out': outputdict, 
+            })
+    except:
+        pass
     return render(request, 'twitterSA.html')
+    
 
 
 def fc(request):
