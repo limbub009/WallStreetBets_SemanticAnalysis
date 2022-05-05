@@ -24,7 +24,6 @@ def create_headers(bearer_token):
     headers = {"Authorization": "Bearer {}".format(bearer_token)}
     return headers
 
-
 def get_rules(headers, bearer_token):
     response = requests.get(
         "https://api.twitter.com/2/tweets/search/stream/rules", headers=headers
@@ -35,7 +34,6 @@ def get_rules(headers, bearer_token):
         )
     print(json.dumps(response.json()))
     return response.json()
-
 
 def delete_all_rules(headers, bearer_token, rules):
     if rules is None or "data" not in rules:
@@ -56,7 +54,6 @@ def delete_all_rules(headers, bearer_token, rules):
         )
     print(json.dumps(response.json()))
 
-
 def set_rules(headers,delete,bearer_token, input):
     # You can adjust the rules if needed
     sample_rules = [
@@ -75,10 +72,9 @@ def set_rules(headers,delete,bearer_token, input):
         )
     print(json.dumps(response.json()))
 
-
 def get_stream(headers, set, bearer_token):
     output = {}
-    t_end = time.time() + 15
+    t_end = time.time() + 60
     print("time set")
     response = requests.get(
         "https://api.twitter.com/2/tweets/search/stream", headers=headers, stream=True,  

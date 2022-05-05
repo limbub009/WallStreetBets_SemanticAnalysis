@@ -85,7 +85,7 @@ def SemAnalysis():
     ignoreAuthC = {'example'}       # authors to ignore for comment 
     upvoteRatio = 0.70         # upvote ratio for post to be considered, 0.70 = 70%
     ups = 20       # define # of upvotes, post is considered if upvotes exceed this #
-    limit = 10      # define the limit, comments 'replace more' limit
+    limit = 10     # define the limit, comments 'replace more' limit
     upvotes = 2     # define # of upvotes, comment is considered if upvotes exceed this #
     picks = 10     # define # of picks here, prints as "Top ## picks are:"
     picks_ayz = 5   # define # of picks for sentiment analysis
@@ -106,8 +106,6 @@ def SemAnalysis():
             try: author = submission.author.name 
             except:pass    
             
-            
-            
             # checking: post upvote ratio # of upvotes, post flair, and author 
             if submission.upvote_ratio >= upvoteRatio and submission.ups > ups and (flair in post_flairs or flair is None) and author not in ignoreAuthP:   
                 submission.comment_sort = 'best'     
@@ -115,7 +113,6 @@ def SemAnalysis():
                 titles.append(submission.title)
                 posts += 1
                 submission.comments.replace_more(limit=limit)   
-                
                 
                 for comment in comments:
                     # try except for deleted account?
