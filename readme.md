@@ -1,8 +1,37 @@
 ![Logo](https://upload.wikimedia.org/wikipedia/en/f/f0/WallStreetBets.png)
 
-![Logo](https://imgur.com/a/coBm0wT)
+# WallStreetBets + Twitter Semantic Analysis
+### QMUL Final Year Project
+
+#### Note
+_Project was completed with no prior knowledge to Machine Learning and Python Modules such as MatPlotLib, NumPY, and pandas._
 
 
+#### Description
+_Created a version of the BERT Model from hugging face which was trained to analyze the sentiment behind meme stock related posts from Reddit and Twitter._
+
+
+## Design Overview
+![Logo](https://i.imgur.com/SokmiR0.png)
+
+
+## Web Pages
+![Logo](https://i.imgur.com/Nrof19K.png)
+
+
+![Logo](https://i.imgur.com/3zYUyKW.png)
+
+
+## Result Pages
+
+![Logo](https://i.imgur.com/DUaAup9.png)
+
+
+![Logo](https://i.imgur.com/hTkc1rN.png)
+
+
+### How to Run 
+_Due to size limitations on GitHub, download program from DropBox here: https://rb.gy/tilame _
 
 TO RUN THE APP YOU MUST FIRST INSTALL THE REQUIRED PYTHON PACKAGES.
 ALL THE PYTHON PACKAGES ARE IN THE REQUIREMENTS TEXT FILE.
@@ -21,3 +50,5 @@ ALL THE PYTHON PACKAGES ARE IN THE REQUIREMENTS TEXT FILE.
 
 	
 4) APP is now running on your local browser. 
+
+
