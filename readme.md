@@ -31,7 +31,7 @@ _Created a version of the BERT Model from hugging face which was trained to anal
 
 
 ### How to Run 
-_Due to size limitations on GitHub, download program from DropBox here: https://rb.gy/tilame _
+_Due to size limitations on GitHub, download program from DropBox here: https://rb.gy/tilame_
 
 TO RUN THE APP YOU MUST FIRST INSTALL THE REQUIRED PYTHON PACKAGES.
 ALL THE PYTHON PACKAGES ARE IN THE REQUIREMENTS TEXT FILE.
