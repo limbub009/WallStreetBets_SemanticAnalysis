@@ -1,12 +1,13 @@
 ![Logo](https://upload.wikimedia.org/wikipedia/en/f/f0/WallStreetBets.png)
 
+![Logo](https://imgur.com/a/coBm0wT)
 
 
 
 TO RUN THE APP YOU MUST FIRST INSTALL THE REQUIRED PYTHON PACKAGES.
 ALL THE PYTHON PACKAGES ARE IN THE REQUIREMENTS TEXT FILE.
 
-1 ) IN YOUR VIRTUAL ENVIRONMENT OR MACHINE RUN  THE COMMAND 
+1) IN YOUR VIRTUAL ENVIRONMENT OR MACHINE RUN  THE COMMAND 
 
 		pip install -r /path/to/requirements.txt
 
