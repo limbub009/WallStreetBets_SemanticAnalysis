@@ -1,3 +1,8 @@
+![Logo](https://upload.wikimedia.org/wikipedia/en/f/f0/WallStreetBets.png)
+
+
+
+
 TO RUN THE APP YOU MUST FIRST INSTALL THE REQUIRED PYTHON PACKAGES.
 ALL THE PYTHON PACKAGES ARE IN THE REQUIREMENTS TEXT FILE.
 
